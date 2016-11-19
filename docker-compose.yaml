@@ -4,6 +4,8 @@ services:
     image: postgres
   redis:
     image: redis
+  elasticsearch:
+    image: elasticsearch
   web:
     build: .
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
@@ -13,6 +15,8 @@ services:
       - "3000:3000"
     depends_on:
       - db
+      - redis
+      - elasticsearch
   worker:
     build:
       context: .
@@ -23,3 +27,4 @@ services:
     depends_on:
       - db
       - redis
+      - elasticsearch
