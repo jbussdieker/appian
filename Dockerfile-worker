@@ -1,0 +1,11 @@
+FROM ruby:2.2.0
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs unzip
+RUN mkdir /appian
+WORKDIR /appian
+ADD Gemfile /appian/Gemfile
+ADD Gemfile.lock /appian/Gemfile.lock
+RUN bundle install
+ADD . /appian
+
+RUN wget -q -O terraform.zip https://releases.hashicorp.com/terraform/0.7.11/terraform_0.7.11_linux_amd64.zip
+RUN unzip terraform.zip && rm terraform.zip && mv terraform /usr/bin
