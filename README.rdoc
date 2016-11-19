@@ -19,3 +19,7 @@ Accessing the rails console:
 Running rake tasks:
 
     $ docker-compose run web rake ...
+
+Restarting a single component:
+
+    $ docker-compose restart worker
