@@ -1,9 +1,12 @@
 class TerraformWorker
   include Sidekiq::Worker
 
-  def perform(command)
+  def perform
     with_tmpdir do
-      puts `terraform #{command} && pwd`
+      File.open("main.tf", "w") do |f|
+        f.write("# FOO")
+      end
+      puts `terraform apply`
     end
   end
 
