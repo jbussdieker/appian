@@ -9,6 +9,10 @@ class Provider < ActiveRecord::Base
     end
   end
 
+  def to_tf
+    to_h.to_json
+  end
+
   def to_h
     { "provider" => { type => configuration } }
   end
