@@ -4,12 +4,9 @@ TBD
 
 === Usage
 
-Building the images:
+Quick start:
 
     $ docker-compose build
-
-Starting the containers:
-
     $ docker-compose up
 
 Accessing the rails console:
@@ -26,6 +23,9 @@ Rollback db migration:
 
 Restarting a single component:
 
+    $ docker-compose restart db
+    $ docker-compose restart redis
+    $ docker-compose restart web
     $ docker-compose restart worker
 
 Generate a new model:
