@@ -23,3 +23,7 @@ Running rake tasks:
 Restarting a single component:
 
     $ docker-compose restart worker
+
+Generate a new model:
+
+    $ docker-compose run web rails g scaffold Provider name:string type:string configuration:text
