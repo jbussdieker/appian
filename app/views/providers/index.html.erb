@@ -1,8 +1,12 @@
+<h1>Providers</h1>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Providers</h1>
+<p>
+  <%= link_to 'New Provider', new_provider_path, class: 'btn btn-default' %>
+</p>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Name</th>
@@ -25,7 +29,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Provider', new_provider_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @deployment.name %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @deployment.project_id %>
+</p>
+
+<p>
+  <strong>Variables:</strong>
+  <%= @deployment.variables %>
+</p>
+
+<p>
+  <strong>Output:</strong>
+  <%= @deployment.output %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @deployment.status %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @deployment.state %>
+</p>
+
+<%= link_to 'Edit', edit_deployment_path(@deployment) %> |
+<%= link_to 'Back', deployments_path %>

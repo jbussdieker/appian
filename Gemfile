@@ -43,4 +43,9 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'redis-rails'
 gem 'sidekiq'
+gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
+gem 'elasticsearch-persistence'
+gem 'bootstrap-sass', '~> 3.3.6'
