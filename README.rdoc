@@ -16,9 +16,13 @@ Accessing the rails console:
 
     $ docker-compose run web rails c
     
-Running rake tasks:
+Running db migrations:
 
-    $ docker-compose run web rake ...
+    $ docker-compose run web rake db:migrate
+
+Rollback db migration:
+
+    $ docker-compose run web rake db:rollback
 
 Restarting a single component:
 
